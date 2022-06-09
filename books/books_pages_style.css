@@ -1,0 +1,226 @@
+#cover {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 450px;
+	background: url("cover img.png");
+}
+
+#cover-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#cover-text {
+    width: 550px;
+    transform: translateX(-75px);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	color: #fff;
+	text-align: right;
+	padding: 10px 0 10px 0;
+}
+
+#cover-text h1 {
+    font-size: 40px;
+}
+
+#cover-text p {
+	font-size: 25px;
+	line-height: 50px;
+}
+
+#cover-text hr {
+	width: 65%;
+	height: 10px;
+	margin: 25px 0 10px 0;
+	background: #fff;
+	border-radius: 15px;
+}
+
+#cover-img {
+	width: 150px;
+	height: 150px;
+}
+
+#books-container {
+	width: 80%;
+	height: 900px;
+	background: #DB4E23;
+	border-radius: 15px 15px 5px 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+#books-container hr {
+	width: 100%;
+	margin: 15px 0 15px 0;
+	height: 5px;
+}
+
+#books-container-text {
+	font-size: 36px;
+	margin: 15px 0 15px 0;
+	color: white;
+	text-align: center;
+	line-height: 24px;
+}
+
+#book_preview {
+	width: 100%;
+	border-radius: 15px 15px 0 0;
+	height: 92%;
+	border: solid black 1px;
+}
+
+#btns-container {
+	height: 8%;
+	width: 100%;
+	border-radius: 0 0 15px 15px ;
+	display: flex;
+}
+
+#download-btn {
+	background: #b80e65;
+}
+
+#print-btn {
+	background: #1791b1;
+}
+
+.btns {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 300ms ease-in-out;
+	background: #1791b1;
+}
+
+.btns:hover {
+	filter: brightness(0.9);
+}
+
+.btns-texts {
+	font-size: 25px;
+	transition: all 300ms ease-in-out;
+}
+.btns-texts:hover {
+	transform: translateY(-4px);
+}
+
+#book {
+	height: 800px;
+	width: 600px;
+	border: solid black 2px;
+	border-radius: 15px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#book-holder {
+	width: 100%;
+	height: 1000px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 15px 0 15px 0;
+}
+
+
+@media (max-width: 425px) {
+
+	#cover {
+		height: 160px;
+		background: url("cover_img_phone.png");
+	}
+
+	#cover-img {
+    	width: 64px;
+    	height: 64px;
+	}
+
+	#cover-text h1 {
+    	font-size: 16px;
+	}
+
+	#cover-text p {
+    	font-size: 12px;
+    	line-height: 18px;
+	}
+
+	#cover-text hr {
+	    width: 80%;
+	    height: 5px;
+	    margin: 10px 0 10px 0;
+	}
+
+	#cover-text {
+    	width: 225px;
+    	transform: translateX(-30px);
+	}
+
+	#book {
+    	width: 90%;
+ 	   height: 70%;
+	}
+
+	#books-container {
+	    width: 90%;
+	    height: 80%;
+    }	
+
+    #books-container-text {
+	    font-size: 18px;
+	    line-height: 24px;
+	    margin: 5px 0 5px 0;
+	}
+
+	#book-holder {
+		height: 675px;
+	}
+
+	.btns-texts {
+    	font-size: 18px;
+	}
+
+}
+
+@media (max-width: 375px) {
+
+	#cover-text hr {
+    	width: 90%;
+    	height: 3px;
+    	margin: 8px 0 8px 0;
+    }
+
+    #cover-img {
+	    width: 56px;
+	    height: 56px;
+	}
+
+	#cover-text h1 {
+    	font-size: 12px;
+	}
+
+	#cover-text {
+	    width: 208px;
+	    transform: translateX(-15px);
+	}
+
+	.btns-texts {
+    	font-size: 14px;
+	}
+
+}
