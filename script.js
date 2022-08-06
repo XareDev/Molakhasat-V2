@@ -1,4 +1,4 @@
-
+import Cookies from 'js.cookie.mjs'
 notification_status = Cookies.get("Notification_Permission")
 
 
