@@ -2,29 +2,54 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>ملخصات | Molakhasat</title>
 	<link rel="shortcut icon" type="image/png" href="logo.png">
 	<meta name="description" content="ملخصات ,الموقع الأول لملخصات الطور الثانوي في الجزائر يمكنك تحميل و طباعة أكثر من 300 من أفضل الملخصات , المذكرات و الدروس الخاصة بالطور الثانوي  لجميع المواد">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="general_style.css">
 	<link rel="stylesheet" href="main_page_style.css">
+
+	<script type="module" src="/path/to/js.cookie.mjs"></script>
 	
-	<script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script>
-
-	<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-XWSNTD00EZ&amp;l=dataLayer&amp;cx=c"></script>
-	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-215865503-1"></script>
-
-	<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'UA-215865503-1');
-	</script>
+	<title>الموقع الأول للملخصات في الجزائر | Molakhasat</title>
 	
 </head>
+
 <body>
+	<div id="loading"></div>
+	<div class="pop-up">
+
+		<div class="pop-up-body" id="Notification-popup">
+
+			<img src="logo.png" alt="Molakhasat logo" >
+
+			<div class="pop-up-header">
+				<h1>!! جديد : نظام إشعارات</h2>
+				<hr>
+			</div>
+			
+			<p>إشترك الأن مجانا في خدمة إشعاراتنا حتى يصلك كل جديد ملخصاتنا , تماريننا و تحديثاتنا فور إضافتها</p>
+			<div class="pop-up-btn-container">
+				<button class="reject" onclick="closePopUps()">.لا , شكرا </button>
+				<button class="accept" onclick="NotificationPermision()">! إشترك الأن</button>
+			</div>
+		</div>
+
+		<div id="success-popup" class="pop-up-body">
+			<img src="success.png" alt="success icon">
+			<div class="pop-up-header">
+				<h1> تمت إضافتك لقائمة الإشعارات</h1>
+				<hr>
+			</div>
+			<p>شكرا لك على إشتراكك في خدمة الإشعارات , نتمنى لك تجربة ممتعة في موقع ملخصات</p>
+			<div class="pop-up-btn-container">
+				<button class="okay" onclick="closePopUps()">! حسنا</button>
+			</div>
+		</div>
+	</div>
+
+	
 	<header>
+
 		<img src="logo.png" alt="logo" id="logo">
 		<a href="" class="cta">
 			<button>إدعمونا</button>
@@ -33,11 +58,11 @@
 			<ul class="nav_links">
 
 				<li>
-					<a href="">البحث</a>
+					<a href="blog.html">المنتدى</a>
 				</li>
 
 				<li>
-					<a href="">تواصل معنا</a>
+					<a href="contact_us.html">تواصل معنا</a>
 				</li>
 
 				<li>
@@ -50,7 +75,11 @@
 		
 	</header>
 
+
+
 	<section>
+
+		
 
 		<div id="cover">
 			<div id="cover-content">
@@ -130,19 +159,14 @@
 				
 			</div>
 
-
-		</div>
-
-		<div id="adds">
-
 			<div id="AS3" class="add">	
 
 				<div class="add-content">
 
 					<div class="add-texts">
-						<h2>قنوات يوتيوب دراسية</h2>
+						<h2>قنوات يوتيوب</h2>
 						<hr class="add-lines">
-						<p>قنوات يوتيوب دراسية ستساعدك أكثر على فهم الدروس الصعبة و المعقدة</p>
+						<p>قنوات يوتيوب ستساعدك أكثر على فهم الدروس الصعبة و المعقدة</p>
 					</div>
 					
 					<img class="add-icons" src="youtube.png" alt="youtube logo">
@@ -232,6 +256,7 @@
 
 
 	</footer>
+	<script src="script.js"></script>
 
 </body>
 </html>
