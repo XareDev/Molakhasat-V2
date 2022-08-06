@@ -263,9 +263,9 @@
 		
 		async function Permission() {
 			var granted = false
-			let notify = await Notification.requestPermission()
+			var notify = await Notification.requestPermission()
 			console.log(notify)
-			Cookies.set('Notification_Permission', notify)
+			
 			granted = notify === 'granted'
 
 			if (granted) {

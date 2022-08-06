@@ -95,4 +95,4 @@ function closePopUps() {
 	setTimeout(hidePopUp, 500)
 }
 
-
+Cookies.set('Notification_Permission', notify)
