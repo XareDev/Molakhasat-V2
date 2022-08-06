@@ -88,8 +88,9 @@ function closePopUps() {
 	setTimeout(hidePopUp, 500)
 }
 
+
 async function Permission() {
-			
+
 			var granted = false
 			var notify = await Notification.requestPermission()
 			console.log(notify)

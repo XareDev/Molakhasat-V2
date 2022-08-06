@@ -1,7 +1,9 @@
 import Cookies from '/js.cookie.mjs'
-if (window.Permission_asked) {
+s = true
+if (s) {
 	
-	Cookies.set('Notification_Permission', window.notify)
+	document.cookie = "hello=world;"
+	console.log(document.cookie)
 
 }
 
