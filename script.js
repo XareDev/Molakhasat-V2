@@ -1,5 +1,3 @@
-import Cookies from 'js-cookie'
-notification_status = Cookies.get("Notification_Permission")
 
 
 function Loading_off(){
@@ -118,8 +116,4 @@ function showSuccess() {
 
 }
 
-if (notification_status == "granted" || notification_status == "denined") {
-	closePopUps()
-} else {
-	pass
-}
+

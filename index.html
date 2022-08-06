@@ -259,6 +259,15 @@
 	<script type="module" src="js.cookie.mjs"></script>
 	<script nomodule defer src="js.cookie.js"></script>
 	<script src="script.js"></script>
-	
+	<script type="module">
+		import Cookies from 'js.cookie.mjs'
+		notification_status = Cookies.get("Notification_Permission")
+		if (notification_status == "granted" || notification_status == "denined") {
+			closePopUps()
+		} else {
+			//body
+		}
+	</script>
+
 </body>
 </html>
