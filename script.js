@@ -94,14 +94,9 @@ async function NotificationPermision() {
 	var granted = false
 	let notify = await Notification.requestPermission()
 	console.log(notify)
-	try {
-		
 
-		Cookies.set('Notification_Permission', notify)
-	}
-	catch() {
-		pass
-	}
+	Cookies.set('Notification_Permission', notify)
+
 	granted = notify === 'granted'
 
 	Response.AddHeader("Set-Cookie", "granted=" + granted +"; path=/;");
