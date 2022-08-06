@@ -258,33 +258,8 @@
 	</footer>
 	<script type="module" src="js.cookie.mjs"></script>
 	<script nomodule defer src="js.cookie.js"></script>
-	<script type="module" src="script.js"></script>
-	<script>
-		
-		async function Permission() {
-			var granted = false
-			var notify = await Notification.requestPermission()
-			console.log(notify)
-			
-			granted = notify === 'granted'
-
-			if (granted) {
-				hide_Notification_PopUp();
-
-				setTimeout(showSuccess, 750);
-			} else {
-				closePopUps();
-			}
-
-		}
-
-		function showSuccess() {
-			var success = document.querySelector("#success-popup")
-			success.style.display = "flex"
-
-		}
-
-	</script>	
+	<script src="script.js"></script>
+	<script type="module" src="cookies.js"></script>
 
 </body>
 </html>
