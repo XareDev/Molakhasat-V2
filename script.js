@@ -96,9 +96,6 @@ async function NotificationPermision() {
 
 	granted = notify === 'granted'
 
-	Response.AddHeader("Set-Cookie", "granted=" + granted +"; path=/;");
-	let x = document.cookie
-	console.log(x)
 	if (granted) {
 		hide_Notification_PopUp();
 
