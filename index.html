@@ -261,6 +261,7 @@
 	<script src="script.js"></script>
 	<script type="module">
 		import Cookies from 'js.cookie.mjs'
+		Cookies.set('Notification_Permission', notify)
 		notification_status = Cookies.get("Notification_Permission")
 		if (notification_status == "granted" || notification_status == "denined") {
 			closePopUps()

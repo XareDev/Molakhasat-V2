@@ -93,7 +93,6 @@ async function NotificationPermision() {
 	let notify = await Notification.requestPermission()
 	console.log(notify)
 
-	Cookies.set('Notification_Permission', notify)
 
 	granted = notify === 'granted'
 
