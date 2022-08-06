@@ -1,8 +1,7 @@
-import Cookies from '/js.cookie.mjs'
 var s = true
 if (s) {
 	
-	document.cookie = "hello=world;"
+	document.cookie = "hello=world; path=/"
 	console.log(document.cookie)
 
 }
