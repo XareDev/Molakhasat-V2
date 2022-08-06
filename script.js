@@ -96,7 +96,7 @@ function closePopUps() {
 }
 
 
-function async Permission() {
+async function Permission() {
 	var granted = false
 	let notify = await Notification.requestPermission()
 	console.log(notify)
@@ -112,6 +112,10 @@ function async Permission() {
 	}
 
 }
+
+module.exports = {
+  Permission,closePopUps,showSuccess,hidePopUp,hide_Success_PopUp,scrollFunction
+};
 
 function showSuccess() {
 	var success = document.querySelector("#success-popup")
