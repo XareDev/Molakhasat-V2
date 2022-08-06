@@ -96,31 +96,3 @@ function closePopUps() {
 }
 
 
-export async function Permission() {
-	var granted = false
-	let notify = await Notification.requestPermission()
-	console.log(notify)
-	Cookies.set('Notification_Permission', notify)
-	granted = notify === 'granted'
-
-	if (granted) {
-		hide_Notification_PopUp();
-
-		setTimeout(showSuccess, 750);
-	} else {
-		closePopUps();
-	}
-
-}
-
-function showSuccess() {
-	var success = document.querySelector("#success-popup")
-	success.style.display = "flex"
-
-}
-
-
-
-
-		
-
