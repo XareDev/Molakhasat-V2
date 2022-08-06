@@ -1,4 +1,4 @@
-import Cookies from 'js.cookie.mjs'
+import Cookies from '/js.cookie.mjs'
 notification_status = Cookies.get("Notification_Permission")
 if (notification_status == "granted" || notification_status == "denined") {
 	console.log("done")
