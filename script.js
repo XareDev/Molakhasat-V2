@@ -19,7 +19,7 @@ window.addEventListener("load", console.log(document.cookie))
 
 window.onscroll = function() {scrollFunction()};
 
-nav_items = document.getElementsByClassName("nav_items")
+var nav_items = document.getElementsByClassName("nav_items")
 
 function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
