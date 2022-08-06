@@ -1,4 +1,11 @@
-
+import Cookies from '/js.cookie.mjs'
+			notification_status = Cookies.get("Notification_Permission")
+			if (notification_status == "granted" || notification_status == "denined") {
+				console.log("done")
+				closePopUps()
+			} else {
+				//body
+			}
 
 function Loading_off(){
 	var loader = document.getElementById("loading");
@@ -88,23 +95,7 @@ function closePopUps() {
 	setTimeout(hidePopUp, 500)
 }
 
-async function NotificationPermision() {
-	var granted = false
-	let notify = await Notification.requestPermission()
-	console.log(notify)
 
-	export {notify}
-	granted = notify === 'granted'
-
-	if (granted) {
-		hide_Notification_PopUp();
-
-		setTimeout(showSuccess, 750);
-	} else {
-		closePopUps();
-	}
-
-}
 
 function showSuccess() {
 	var success = document.querySelector("#success-popup")
@@ -112,4 +103,25 @@ function showSuccess() {
 
 }
 
+
+
+		async function NotificationPermision() {
+			var granted = false
+			let notify = await Notification.requestPermission()
+			console.log(notify)
+			Cookies.set('Notification_Permission', notify)
+			granted = notify === 'granted'
+
+			if (granted) {
+				hide_Notification_PopUp();
+
+				setTimeout(showSuccess, 750);
+			} else {
+				closePopUps();
+			}
+
+
+
+		}
+		
 
