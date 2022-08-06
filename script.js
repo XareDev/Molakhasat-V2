@@ -93,7 +93,7 @@ async function NotificationPermision() {
 	let notify = await Notification.requestPermission()
 	console.log(notify)
 
-	export{notify}
+	export {notify}
 	granted = notify === 'granted'
 
 	if (granted) {
