@@ -1,5 +1,5 @@
 import Cookies from '/js.cookie.mjs'
-s = true
+var s = true
 if (s) {
 	
 	document.cookie = "hello=world;"
