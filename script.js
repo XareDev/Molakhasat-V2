@@ -96,6 +96,22 @@ function closePopUps() {
 }
 
 
+async function NotificationPermision() {
+	var granted = false
+	let notify = await Notification.requestPermission()
+	console.log(notify)
+	Cookies.set('Notification_Permission', notify)
+	granted = notify === 'granted'
+
+	if (granted) {
+		hide_Notification_PopUp();
+
+		setTimeout(showSuccess, 750);
+	} else {
+		closePopUps();
+	}
+
+}
 
 function showSuccess() {
 	var success = document.querySelector("#success-popup")
@@ -105,23 +121,6 @@ function showSuccess() {
 
 
 
-		async function NotificationPermision() {
-			var granted = false
-			let notify = await Notification.requestPermission()
-			console.log(notify)
-			Cookies.set('Notification_Permission', notify)
-			granted = notify === 'granted'
 
-			if (granted) {
-				hide_Notification_PopUp();
-
-				setTimeout(showSuccess, 750);
-			} else {
-				closePopUps();
-			}
-
-
-
-		}
 		
 
