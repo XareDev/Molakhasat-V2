@@ -90,7 +90,7 @@ function closePopUps() {
 
 async function NotificationPermision() {
 	var granted = false
-	let notify = await Notification.requestPermission()
+	var notify = await Notification.requestPermission()
 	console.log(notify)
 
 
