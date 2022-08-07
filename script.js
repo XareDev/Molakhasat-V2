@@ -123,7 +123,7 @@ async function Permission() {
 
 
 function subscribeUserToPush() {
-  return navigator.serviceWorker.register('script.js')
+  return navigator.serviceWorker.register('service-worker.js')
   .then(function(registration) {
     var subscribeOptions = {
       userVisibleOnly: true,
