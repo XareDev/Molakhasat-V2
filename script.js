@@ -141,3 +141,29 @@ async function Permission() {
       }
     );
   });
+
+self.addEventListener('push', function(event) {
+  if (!(self.Notification && self.Notification.permission === 'granted')) {
+    return;
+  }
+
+  let data = {};
+  if (event.data) {
+    data = event.data.json();
+  }
+  const title = data.title || "Something Has Happened";
+  const message = data.message || "Here's something you might want to check out.";
+  const icon = "logo.png";
+
+  const notification = new self.Notification(title, {
+    body: message,
+    tag: 'simple-push-demo-notification',
+    icon: icon
+  });
+
+  notification.addEventListener('click', function() {
+    if (clients.openWindow) {
+      clients.openWindow('molakhasat.netlify.app');
+    }
+  });
+});
