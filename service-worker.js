@@ -24,6 +24,6 @@ self.addEventListener('notificationclick', function(event) {
       icon: 'logo.png',
       vibrate: [200, 100, 200, 100, 200, 100, 200],
       tag: 'New-Molakhasat'
-      click_action: "معرفة المزيد"
+      actions: [{action: "open_url", title: "Read Now"}]
     }
 
