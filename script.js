@@ -1,5 +1,3 @@
-var Permission_asked = false
-
 function Loading_off(){
 	var loader = document.getElementById("loading");
 	loader.style.display ="none";

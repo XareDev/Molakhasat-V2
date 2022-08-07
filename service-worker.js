@@ -19,10 +19,12 @@ self.addEventListener('notificationclick', function(event) {
     );
 });
 
- self.registration.showNotification('ملخصات جديدة', {
+ window.addEventListener("load", function() {
+    self.registration.showNotification('ملخصات جديدة', {
       body: 'تمت إضافة ملخصات جديدة!',
       icon: 'logo.png',
       vibrate: [200, 100, 200, 100, 200, 100, 200],
       tag: 'New-Molakhasat',
       actions: [{action: "open_url", title: "رؤية المزيد"}]
-    });
+    })
+};
