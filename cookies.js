@@ -1,7 +1,7 @@
-var p = window.Permission_asked
+var p = Notification.permission
 if (p) {
 	
-	document.cookie = "=world; path=/"
+	document.cookie = "permission="+ p+"; path=/"
 	console.log(document.cookie)
 
 }
