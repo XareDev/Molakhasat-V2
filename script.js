@@ -128,10 +128,7 @@ async function Permission() {
  }).then(
       function(pushSubscription) {
         console.log(pushSubscription.endpoint);
-        D = new Date()
-        if (D.getHours() == 14) {
-        	serviceWorkerRegistrationshowNotification("S H I T Nigga")
-        }
+        serviceWorkerRegistration.showNotification("S H I T Nigga")
         // The push subscription details needed by the application
         // server are now available, and can be sent to it using,
         // for example, an XMLHttpRequest.
