@@ -8,7 +8,7 @@ function Loading_off(){
    var notification_status = Notification.permission
 	if (notification_status == "granted" || notification_status == "denined") {
 		document.querySelector("#Notification-popup").style.display = "none"
-		document.querySelector(".popup").style.display = "none"
+		document.querySelector(".pop-up").style.display = "none"
 	} else {
 		//
 	}
