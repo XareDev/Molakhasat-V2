@@ -121,8 +121,6 @@ async function Permission() {
 
 		}
 
-
-function subscribeUserToPush() {
 	navigator.serviceWorker.register('service-worker.js').then(
   function(serviceWorkerRegistration) {
   	serviceWorkerRegistration.pushManager.subscribe({userVisibleOnly: true, applicationServerKey:
@@ -130,7 +128,7 @@ function subscribeUserToPush() {
  }).then(
       function(pushSubscription) {
         console.log(pushSubscription.endpoint);
-        
+        serviceWorkerRegistration.showNotification("S H I T Nigga")
         // The push subscription details needed by the application
         // server are now available, and can be sent to it using,
         // for example, an XMLHttpRequest.
@@ -143,5 +141,3 @@ function subscribeUserToPush() {
       }
     );
   });
-}
-window.serviceWorkerRegistration.showNotification("S H I T Nigga")
