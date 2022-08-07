@@ -125,7 +125,9 @@ async function Permission() {
 function subscribeUserToPush() {
 	navigator.serviceWorker.register('service-worker.js').then(
   function(serviceWorkerRegistration) {
-  	serviceWorkerRegistration.pushManager.subscribe({userVisibleOnly: true});.then(
+  	serviceWorkerRegistration.pushManager.subscribe({userVisibleOnly: true, applicationServerKey: btoa(
+        'BBoTXbLMoBRSoucwFdva-DoLjVRW4ZkD9unsMaxXZSUSFKmlMFWGUslkejUn88VgKLXg2q37vK41ywkY76TMc2A'
+      )}).then(
       function(pushSubscription) {
         console.log(pushSubscription.endpoint);
         // The push subscription details needed by the application
