@@ -130,22 +130,15 @@ function subscribeUserToPush() {
 		        console.log('Service worker installed');
 		    } else if(registration.active) {
 		        console.log('Service worker active');
-		        function(registration) {
 				    var subscribeOptions = {
 				      userVisibleOnly: true,
 				      applicationServerKey: btoa(
 				        'BBoTXbLMoBRSoucwFdva-DoLjVRW4ZkD9unsMaxXZSUSFKmlMFWGUslkejUn88VgKLXg2q37vK41ywkY76TMc2A'
 				      )
-				    };
+				    }
 
 		        return registration.pushManager.subscribe(subscribeOptions);
-		    }
-		 // Include below mentioned validations
-		}
-
-    
-  }
-  .then(function(pushSubscription) {
+		    }.then(function(pushSubscription) {
     console.log('PushSubscription: ', JSON.stringify(pushSubscription));
     return pushSubscription;
   });
