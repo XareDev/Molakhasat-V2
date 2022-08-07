@@ -9,8 +9,11 @@ function Loading_off(){
 	if (notification_status == "granted" || notification_status == "denined") {
 		document.querySelector("#Notification-popup").style.display = "none"
 		document.querySelector(".pop-up").style.display = "none"
+	} else if(notification_status == "granted"){
+		const greeting = new Notification('Hi, How are you?');
+
 	} else {
-		//
+		
 	}
 }
 
@@ -121,3 +124,4 @@ async function Permission() {
 			success.style.display = "flex"
 
 		}
+
