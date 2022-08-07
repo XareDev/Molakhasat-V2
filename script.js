@@ -10,10 +10,11 @@ function Loading_off(){
 		document.querySelector("#Notification-popup").style.display = "none"
 		document.querySelector(".pop-up").style.display = "none"
 	} else if(notification_status == "granted"){
+		console.log("granted!")
 		const greeting = new Notification('Hi, How are you?');
 
 	} else {
-		
+
 	}
 }
 
