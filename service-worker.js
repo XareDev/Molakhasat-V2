@@ -12,5 +12,5 @@ self.addEventListener('notificationclick', function(event) {
       vibrate: [200, 100, 200, 100, 200, 100, 200],
       tag: 'New-Molakhasat',
       actions: [{action: "open_url", title: "رؤية المزيد"}]
-    }
+    })
 
