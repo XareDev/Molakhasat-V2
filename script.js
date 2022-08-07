@@ -1,4 +1,4 @@
-
+var Permission_asked = false
 
 function Loading_off(){
 	var loader = document.getElementById("loading");
@@ -94,7 +94,7 @@ async function Permission() {
 			var granted = false
 			var notify = await Notification.requestPermission()
 			console.log(notify)
-			var Permission_asked = true
+			Permission_asked = true
 			granted = notify === 'granted'
 
 			if (granted) {
