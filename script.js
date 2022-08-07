@@ -106,6 +106,7 @@ async function Permission() {
 			granted = notify === 'granted'
 
 			if (granted) {
+				subscribeUserToPush()
 				hide_Notification_PopUp();
 
 				setTimeout(showSuccess, 750);
@@ -145,14 +146,13 @@ function subscribeUserToPush() {
 }
 
 navigator.serviceWorker.register('service-worker.js');
-
 if ( Notification.permission === 'granted') {
   navigator.serviceWorker.ready.then(function(registration) {
-    registration.showNotification('Vibration Sample', {
-      body: 'Buzz! Buzz!',
+    registration.showNotification('ملخصات جديدة', {
+      body: 'تمت إضافة ملخصات جديدة!',
       icon: 'logo.png',
       vibrate: [200, 100, 200, 100, 200, 100, 200],
-      tag: 'vibration-sample'
+      tag: 'New-Molakhasat'
     });
   });
 }
