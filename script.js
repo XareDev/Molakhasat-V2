@@ -122,6 +122,6 @@ async function Permission() {
 
 		}
 
-if(notification_status == "granted") {
+if(Notification.permission == "granted") {
 	const greeting = new Notification('Hi, How are you?');
 }
