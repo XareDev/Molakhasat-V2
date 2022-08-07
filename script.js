@@ -123,30 +123,28 @@ async function Permission() {
 
 
 function subscribeUserToPush() {
-  return navigator.serviceWorker.register('service-worker.js')
-
-  .then(function(registration) {
-    var subscribeOptions = {
-      userVisibleOnly: true,
-      applicationServerKey: btoa(
-        'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U'
-      )
-    };
-
-    navigator.serviceWorker.register('sw.js').then(function(reg) {
-		 if(reg.installing) {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
+		 if(registration.installing) {
 		        console.log('Service worker installing');
-		    } else if(reg.waiting) {
+		    } else if(registration.waiting) {
 		        console.log('Service worker installed');
-		    } else if(reg.active) {
+		    } else if(registration.active) {
 		        console.log('Service worker active');
+		        function(registration) {
+				    var subscribeOptions = {
+				      userVisibleOnly: true,
+				      applicationServerKey: btoa(
+				        'BBoTXbLMoBRSoucwFdva-DoLjVRW4ZkD9unsMaxXZSUSFKmlMFWGUslkejUn88VgKLXg2q37vK41ywkY76TMc2A'
+				      )
+				    };
+
 		        return registration.pushManager.subscribe(subscribeOptions);
 		    }
 		 // Include below mentioned validations
 		}
 
     
-  })
+  }
   .then(function(pushSubscription) {
     console.log('PushSubscription: ', JSON.stringify(pushSubscription));
     return pushSubscription;
