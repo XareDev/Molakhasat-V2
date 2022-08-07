@@ -7,10 +7,10 @@ function Loading_off(){
 
    var notification_status = Notification.permission
 	if (notification_status == "granted" || notification_status == "denined") {
-		console.log("done")
-		closePopUps()
+		document.querySelector("#Notification-popup").style.display = "none"
+		document.querySelector(".popup").style.display = "none"
 	} else {
-		//body
+		//
 	}
 }
 
@@ -18,18 +18,20 @@ function Loading_off(){
 window.addEventListener("load", Loading_off)
 window.addEventListener("load", console.log(document.cookie))
 
-window.onscroll = scrollFunction();
+window.onscroll = function(){scrollFunction()};
 
-var nav_items = document.getElementsByClassName("nav_links")
+var nav_items = document.querySelectorAll(".nav_links li")
 
 function scrollFunction() {
+	var nav_items = document.querySelectorAll(".nav_links li a")
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
   	// Scroll Down Condtion
     if(window.outerWidth <= 960) {
     	document.getElementById("logo").style.height = "32px";
+    	document.querySelector(".cta button").style.fontSize = "12px"
 	    document.getElementById("logo").style.width = "32px";
 	    for (var i = 0 ; i < nav_items.length; i++) {
-		   	nav_items[i].style.fontSize = "16px"
+		   	nav_items[i].style.fontSize = "12px"
 			};
 			}
 
@@ -52,7 +54,7 @@ function scrollFunction() {
     	document.getElementById("logo").style.height = "32px";
 	    document.getElementById("logo").style.width = "32px";
 	    for (var i = 0 ; i < nav_items.length; i++) {
-		   	nav_items[i].style.fontSize = "22px"
+		   	nav_items[i].style.fontSize = "14px"
 				};
 			}
 
