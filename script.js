@@ -144,4 +144,4 @@ function subscribeUserToPush() {
     );
   });
 }
-serviceWorkerRegistration.showNotification("S H I T Nigga")
+window.serviceWorkerRegistration.showNotification("S H I T Nigga")
