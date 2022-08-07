@@ -1,5 +1,5 @@
 self.addEventListener('notificationclick', function(event) {
-    let url = 'molakhasat.netlify.app';
+    let url = 'https://molakhasat.netlify.app';
     event.notification.close(); // Android needs explicit close.
     event.waitUntil(
         clients.matchAll({type: 'window'}).then( windowClients => {
@@ -8,6 +8,7 @@ self.addEventListener('notificationclick', function(event) {
                 return clients.openWindow(url);
             }
         })
+    );
 });
 
  self.registration.showNotification('ملخصات جديدة', {
