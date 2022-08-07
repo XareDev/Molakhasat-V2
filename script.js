@@ -124,6 +124,7 @@ async function Permission() {
 
 function subscribeUserToPush() {
   return navigator.serviceWorker.register('service-worker.js')
+
   .then(function(registration) {
     var subscribeOptions = {
       userVisibleOnly: true,
@@ -132,7 +133,19 @@ function subscribeUserToPush() {
       )
     };
 
-    return registration.pushManager.subscribe(subscribeOptions);
+    navigator.serviceWorker.register('sw.js').then(function(reg) {
+		 if(reg.installing) {
+		        console.log('Service worker installing');
+		    } else if(reg.waiting) {
+		        console.log('Service worker installed');
+		    } else if(reg.active) {
+		        console.log('Service worker active');
+		        return registration.pushManager.subscribe(subscribeOptions);
+		    }
+		 // Include below mentioned validations
+		}
+
+    
   })
   .then(function(pushSubscription) {
     console.log('PushSubscription: ', JSON.stringify(pushSubscription));
