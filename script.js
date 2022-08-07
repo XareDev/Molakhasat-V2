@@ -123,7 +123,7 @@ async function Permission() {
 
 
 function subscribeUserToPush() {
-    navigator.serviceWorker.register('sw.js').then(function(registration) {
+    navigator.serviceWorker.register('service-worker.js').then(function(registration) {
 		 if(registration.installing) {
 		        console.log('Service worker installing');
 		    } else if(registration.waiting) {
