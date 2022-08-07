@@ -16,7 +16,6 @@ function Loading_off(){
 
 
 window.addEventListener("load", Loading_off)
-window.addEventListener("load", console.log(document.cookie))
 
 window.onscroll = function(){scrollFunction()};
 
