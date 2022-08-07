@@ -123,24 +123,22 @@ async function Permission() {
 
 
 function subscribeUserToPush() {
-    navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-		 if(registration.installing) {
-		        console.log('Service worker installing');
-		    } else if(registration.waiting) {
-		        console.log('Service worker installed');
-		    } else if(registration.active) {
-		        console.log('Service worker active');
-				    var subscribeOptions = {
-				      userVisibleOnly: true,
-				      applicationServerKey: btoa(
-				        'BBoTXbLMoBRSoucwFdva-DoLjVRW4ZkD9unsMaxXZSUSFKmlMFWGUslkejUn88VgKLXg2q37vK41ywkY76TMc2A'
-				      )
-				    }
-
-		        return registration.pushManager.subscribe(subscribeOptions);
-		    }.then(function(pushSubscription) {
-    console.log('PushSubscription: ', JSON.stringify(pushSubscription));
-    return pushSubscription;
+	navigator.serviceWorker.register('service-worker.js').then(
+  function(serviceWorkerRegistration) {
+    serviceWorkerRegistration.pushManager.subscribe().then(
+      function(pushSubscription) {
+        console.log(pushSubscription.endpoint);
+        // The push subscription details needed by the application
+        // server are now available, and can be sent to it using,
+        // for example, an XMLHttpRequest.
+      }, function(error) {
+        // During development it often helps to log errors to the
+        // console. In a production environment it might make sense to
+        // also report information about errors back to the
+        // application server.
+        console.log(error);
+      }
+    );
   });
 }
 
