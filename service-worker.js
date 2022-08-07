@@ -27,4 +27,4 @@ self.addEventListener('notificationclick', function(event) {
       tag: 'New-Molakhasat',
       actions: [{action: "open_url", title: "رؤية المزيد"}]
     })
-};
+})
