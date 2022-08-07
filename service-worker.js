@@ -1,4 +1,4 @@
-self.addEventListener('click', function(event) {
+self.addEventListener('notificationclick', function(event) {
     let url = 'molakhasat.netlify.app';
     event.notification.close(); // Android needs explicit close.
     event.waitUntil(
@@ -24,6 +24,6 @@ self.addEventListener('click', function(event) {
       icon: 'logo.png',
       vibrate: [200, 100, 200, 100, 200, 100, 200],
       tag: 'New-Molakhasat'
-      action: "معرفة المزيد"
+      click_action: "معرفة المزيد"
     }
 
