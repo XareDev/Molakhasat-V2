@@ -146,13 +146,3 @@ function subscribeUserToPush() {
 }
 
 navigator.serviceWorker.register('service-worker.js');
-if ( Notification.permission === 'granted') {
-  navigator.serviceWorker.ready.then(function(registration) {
-    registration.showNotification('ملخصات جديدة', {
-      body: 'تمت إضافة ملخصات جديدة!',
-      icon: 'logo.png',
-      vibrate: [200, 100, 200, 100, 200, 100, 200],
-      tag: 'New-Molakhasat'
-    });
-  });
-}

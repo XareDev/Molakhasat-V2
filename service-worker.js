@@ -1,4 +1,4 @@
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('click', function(event) {
     let url = 'molakhasat.netlify.app';
     event.notification.close(); // Android needs explicit close.
     event.waitUntil(
