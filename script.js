@@ -147,7 +147,7 @@ function subscribeUserToPush() {
 
 navigator.serviceWorker.register('service-worker.js');
 
-if (notification_status === 'granted') {
+if ( Notification.permission === 'granted') {
   navigator.serviceWorker.ready.then(function(registration) {
     registration.showNotification('Vibration Sample', {
       body: 'Buzz! Buzz!',
