@@ -126,7 +126,7 @@ function subscribeUserToPush() {
 	navigator.serviceWorker.register('service-worker.js').then(
   function(serviceWorkerRegistration) {
   	serviceWorkerRegistration.pushManager.subscribe({userVisibleOnly: true, applicationServerKey: btoa(
-        'BBoTXbLMoBRSoucwFdva-DoLjVRW4ZkD9unsMaxXZSUSFKmlMFWGUslkejUn88VgKLXg2q37vK41ywkY76TMc2A'
+        'uZLJm4yto5WZ8DhbYBuPuc8-xHTebJ2cAeEnfYNIuDQ'
       )}).then(
       function(pushSubscription) {
         console.log(pushSubscription.endpoint);
