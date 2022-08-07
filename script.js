@@ -4,15 +4,23 @@ function Loading_off(){
 	var loader = document.getElementById("loading");
 	loader.style.display ="none";
    document.querySelector("body").style.overflow = "visible"
+
+   var notification_status = Notification.permission
+	if (notification_status == "granted" || notification_status == "denined") {
+		console.log("done")
+		closePopUps()
+	} else {
+		//body
+	}
 }
 
 
 window.addEventListener("load", Loading_off)
 window.addEventListener("load", console.log(document.cookie))
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = scrollFunction();
 
-var nav_items = document.getElementsByClassName("nav_items")
+var nav_items = document.getElementsByClassName("nav_links")
 
 function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -94,7 +102,6 @@ async function Permission() {
 			var granted = false
 			let notify = await Notification.requestPermission()
 			console.log(notify)
-			Permission_asked = true
 			granted = notify === 'granted'
 
 			if (granted) {
