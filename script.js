@@ -128,7 +128,10 @@ async function Permission() {
  }).then(
       function(pushSubscription) {
         console.log(pushSubscription.endpoint);
-        serviceWorkerRegistration.showNotification("S H I T Nigga")
+        D = new Date()
+        if (D.getHours() == 14) {
+        	serviceWorkerRegistrationshowNotification("S H I T Nigga")
+        }
         // The push subscription details needed by the application
         // server are now available, and can be sent to it using,
         // for example, an XMLHttpRequest.
@@ -141,29 +144,3 @@ async function Permission() {
       }
     );
   });
-
-self.addEventListener('push', function(event) {
-  if (!(self.Notification && self.Notification.permission === 'granted')) {
-    return;
-  }
-
-  let data = {};
-  if (event.data) {
-    data = event.data.json();
-  }
-  const title = data.title || "Something Has Happened";
-  const message = data.message || "Here's something you might want to check out.";
-  const icon = "logo.png";
-
-  const notification = new self.Notification(title, {
-    body: message,
-    tag: 'simple-push-demo-notification',
-    icon: icon
-  });
-
-  notification.addEventListener('click', function() {
-    if (clients.openWindow) {
-      clients.openWindow('molakhasat.netlify.app');
-    }
-  });
-});
