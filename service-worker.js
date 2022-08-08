@@ -18,14 +18,14 @@ self.addEventListener('notificationclick', function(event) {
         })
     );
 });
-self.addEventListener('push', function(event) {
-    self.registration.showNotification('ملخصات جديدة', {
+    self.registration.sendNotification('ملخصات جديدة', {
       body: 'تمت إضافة ملخصات جديدة!',
       icon: 'logo.png',
+      gcmAPIKey:"AAAAowSf5fQ:APA91bEjr_0pW7E7GL956y9EgqYsCYqonraPOaYGbCsqZjRV3eNBMxc3P8OkFSoQpEMzZ8PKcnMYSyavdj5QC_UWe-lWozCegU6ekMKWObL-08I0gN71vkwsMPTwF1Yc_U1Tkn6MImqD",
       vibrate: [200, 100, 200, 100, 200, 100, 200],
       tag: 'New-Molakhasat',
       actions: [{action: "open_url", title: "رؤية المزيد"}]
     })
-});
+
 
     
