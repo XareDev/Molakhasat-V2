@@ -218,9 +218,6 @@ header {
 	}
 }
 
-::-webkit-scrollbar-track {
-	
-}
 
 * {
 	box-sizing: border-box;
@@ -240,7 +237,7 @@ section {
 	background: #fff;
 }
 
-li,a,button,p,h1,h2 {
+li,a,button,p,h1,h2,input {
 	font-family: 'Readex Pro', sans-serif;
 
 	text-decoration: none;
