@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<link rel="shortcut icon" type="image/png" href="logo.png">
+	<meta name="description" content="ملخصات ,الموقع الأول لملخصات الطور الثانوي في الجزائر يمكنك تحميل و طباعة أكثر من 300 من أفضل الملخصات , المذكرات و الدروس الخاصة بالطور الثانوي  لجميع المواد">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="general_style.css">
+	<link rel="stylesheet" href="chart_page.css">
+	
+
+
+	
+	<title>الموقع الأول للملخصات في الجزائر | Molakhasat</title>
+	
+</head>
+
+<body>
+	<div id="loading"></div>
+    <div id="info-popup">
+        <button id="okay" onclick="hidePop()">حسنا</button>
+        
+        <p>
+            <span id="important">ملاحظة :</span>
+            إذا أحتوت النتيجة على مالانهاية سيتم إستبداله بقيمة 1000 
+           
+        </p>
+
+        <img src="info.png" alt="" id="info-img">
+
+        
+    </div>
+	
+	<header>
+
+		<img src="logo.png" alt="logo" id="logo">
+		<a href="" class="cta">
+			<button>إدعمونا</button>
+		</a>
+		<nav>
+			<ul class="nav_links">
+
+				<li>
+					<a href="blog.html">المنتدى</a>
+				</li>
+
+				<li>
+					<a href="contact_us.html">تواصل معنا</a>
+				</li>
+
+				<li>
+					<a href="" id="current-page">الرئيسية</a>
+				</li>
+
+
+			</ul>
+		</nav>
+		
+	</header>
+
+
+
+	<section>
+
+		
+
+		<div id="cover">
+
+			<div id="cover-content">
+				
+				<div id="cover-text">
+					<h1>راسم الدالة</h1>
+					<hr>
+					<p>
+                        راسم الدالة هي أداة دراسية ستساعدك على رسم الدوال العددية و تمثيلها بيانيا
+                    </p>
+				</div>
+				<img src="function.png" alt="" id="cover-img">
+			</div>
+
+		</div>
+
+        <div id="function-define">
+            <h2>: تعريف الدالة</h2>
+
+            <div id="function">
+                <button>f(x)</button>
+                <input type="text">
+            </div>
+
+            <div id="functions-type-btns">
+                <button id="left-btn" onclick="previousWord()"><</button>
+
+                <div id="functions-btns">
+                    <button class="function-btns" onclick="addToFunction('0')">0</button>
+                    <button class="function-btns" onclick="addToFunction('1')">1</button>
+                    <button class="function-btns" onclick="addToFunction('2')">2</button>
+                    <button class="function-btns" onclick="addToFunction('3')">3</button>
+                    <button class="function-btns" onclick="addToFunction('4')">4</button>
+                    <button class="function-btns" onclick="addToFunction('5')">5</button>
+                    <button class="function-btns" onclick="addToFunction('6')">6</button>
+                    <button class="function-btns" onclick="addToFunction('7')">7</button>
+                    <button class="function-btns" onclick="addToFunction('8')">8</button>
+                    <button class="function-btns" onclick="addToFunction('9')">9</button>
+                    <button class="function-btns" onclick="delAll()">C</button>
+                    <button class="function-btns" onclick="del()" >
+                        <img src="remove.png" alt="delete icon" id="delete-icon">
+                    </button>
+                    <button class="function-btns" onclick="addToFunction('log(')">log</button>
+                    <button class="function-btns" onclick="addToFunction('ln(')">ln</button>
+                    <button class="function-btns" onclick="addToFunction('^')">^</button>
+                    <button class="function-btns" onclick="addToFunction('e(')">e</button>
+                    <button class="function-btns" onclick="addToFunction('√(')">√</button>
+                    <button class="function-btns" onclick="addToFunction('x')">x</button>
+                    <button class="function-btns" onclick="addToFunction('*')">*</button>
+                    <button class="function-btns" onclick="addToFunction('+')">+</button>
+                    <button class="function-btns" onclick="addToFunction('-')">-</button>
+                    <button class="function-btns" onclick="addToFunction('/')">/</button>
+                    <button class="function-btns" onclick="addToFunction('(')">(</button>
+                    <button class="function-btns" onclick="addToFunction(')')">)</button>
+                </div>
+
+                <button id="right-btn" onclick="nextWord()">></button>
+                <div id="range">
+
+                    <input type="number" id="end-range" name="quantity" class="range-input" placeholder="أدخل نهاية الدالة">
+                    <input type="number" id="start-range" name="quantity" class="range-input" placeholder="أدخل بداية الدالة">
+                    
+                </div>
+                <button id="show-btn" onclick="showFunction()" disabled>إظهار الرسم البياني</button>
+            </div>
+        </div>
+        <div id="function-canvas">
+            <canvas ></canvas>
+        </div>
+
+    </section>
+
+    <footer>
+
+		<div id="page-end"></div>
+
+
+	</footer>
+	<script src="script.js"></script>
+    <script src="chart_page.js"></script>
+	<script>
+       
+ 
+      </script>
+       
+    
+</body>
+</html>
