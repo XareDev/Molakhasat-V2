@@ -301,11 +301,11 @@ function getYAxis() {
     for (let x = start_number; x <= end_number; x++) {
         m = toFunction(input.value, x)
         if(m == Infinity) {
-            ys.push(1000)
+            ys.push(undefined)
         }
 
         if(m == -Infinity) {
-            ys.push(-1000)
+            ys.push(undefined)
         }
         else {
             console.log(m)
