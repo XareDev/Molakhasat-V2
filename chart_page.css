@@ -328,7 +328,7 @@
 }
  
 
-@media (min-width: 425px) and (max-width: 600px) {
+@media (min-width: 400px) and (max-width: 600px) {
 
 	#cover {
 		height: 160px;
