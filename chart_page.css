@@ -328,7 +328,7 @@
 }
  
 
-@media (min-width: 400px) and (max-width: 600px) {
+@media (min-width: 350px) and (max-width: 600px) {
 
 	#cover {
 		height: 160px;
@@ -366,14 +366,14 @@
     }
     
     #functions-btns {
-        grid-template-columns: repeat(6, 35px);
-        grid-template-rows: repeat(4, 35px);
+        grid-template-columns: repeat(6, 30px);
+        grid-template-rows: repeat(4, 30px);
         gap: 15px;
     }
 
     #functions-type-btns {
         gap: 15px;
-        grid-template-columns: 40px auto 40px;
+        grid-template-columns: 30px auto 30px;
     }
 
     .function-btns {
@@ -382,6 +382,7 @@
 
     #function {
         width: 90%;
+        height: 40px;
     }
     
     #function-define {
@@ -421,6 +422,10 @@
     #okay{
         font-size: 16px;
         padding: 7px 16px;
+    }
+
+    .range-input {
+        padding: 5px 0px;
     }
 
 }
