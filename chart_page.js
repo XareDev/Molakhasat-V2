@@ -381,6 +381,6 @@ function log(x) {
 }
 
 function e(x) {
-    return Math.exp(x)
+    return Math.exp(x);                                                                                                                                                                                                                                                                                                                                                                                                                                                sq(x)
 
 }
