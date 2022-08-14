@@ -379,3 +379,8 @@ function ln(x) {
 function log(x) {
     return Math.log10(x)
 }
+
+function e(x) {
+    return Math.exp(x)
+
+}
