@@ -424,11 +424,33 @@ header button:hover {
 @media (max-width: 375px) {
 
 	header li, a, button {
-    	font-size: 11px;
+    	font-size: 9px;
 	}
 
 	#page-end {
-    	height: 20px;
+    	height: 10px;
+	}
+
+	header button {
+		padding: 3px 6px;
+		font-size: 10px;
+	}
+
+	.nav_links li {
+		padding: 0px 8px;
+	}
+
+	#logo {
+		height: 24px;
+		width: 24px;
+	}
+
+	#cover {
+		height: 185px;
+	}
+
+	header {
+		padding: 5px;
 	}
 
 

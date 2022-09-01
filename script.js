@@ -56,7 +56,14 @@ function scrollFunction() {
 		   	nav_items[i].style.fontSize = "12px"
 				};
 			}
-
+		if(window.outerWidth <= 375) {
+			document.getElementById("logo").style.height = "24px";
+			document.getElementById("logo").style.width = "24px";
+			document.querySelector(".cta button").style.fontSize = "10px"
+			for (var i = 0 ; i < nav_items.length; i++) {
+					nav_items[i].style.fontSize = "9px"
+					};
+				}
 		else {
 		  document.getElementById("logo").style.height = "64px";
 		  document.getElementById("logo").style.width = "64px";

@@ -764,4 +764,47 @@
         width: 15px;
         height: 15px;
     }
+
+    #cover-text {
+        width: 275px;
+        transform: translateX(-16px);
+    }
+
+    
+}
+
+
+@media (max-width: 375px) {
+
+	#download {
+        font-size: small;
+        width: 70%;
+    }
+
+    #Deriv {
+        width: 100%;
+    }
+
+    #lim-content {
+        flex-direction: column;
+    }
+
+    #lim {
+        flex-direction: column-reverse;
+    }
+
+    #lim-content > *{
+        margin-bottom: 10px;
+    }
+
+    #lim-content > *:is(:first-child){
+        margin-top: 5px;
+        font-size: small;
+    }
+
+    #lim button {
+        padding: 4px 10px;
+    }
+
+
 }
