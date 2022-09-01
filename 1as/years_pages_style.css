@@ -1,0 +1,258 @@
+#cover {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 450px;
+	background: url("cover img.png");
+}
+
+#cover-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#cover-text {
+	width: 700px;
+	transform: translateX(-100px);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	color: #fff;
+	text-align: right;
+	padding: 10px 0 10px 0;
+}
+
+#cover-text h1 {
+	font-size: 50px;
+}
+
+#cover-text p {
+	font-size: 25px;
+	line-height: 50px;
+}
+
+#cover-text hr {
+	width: 65%;
+	height: 10px;
+	margin: 25px 0 10px 0;
+	background: #fff;
+	border-radius: 15px;
+}
+
+#cover-img {
+	width: 150px;
+	height: 150px;
+}
+
+#subs {
+	width: 100%;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0 0 0;
+}
+.sub-row {
+	width: 100%;
+	height: 30%;
+	margin: 30px 0 30px 0;
+	display: flex;
+	justify-content: center;
+}
+.sub {
+	height: 100%;
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 75px 0 75px;
+}
+.sub-icons {
+	width: 100px;
+	height: 100px;
+}
+
+.sub-circle {
+	height: 175px;
+	width: 175px;
+	border-radius: 50%;
+	background: #323232;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 0 15px 0;
+	transition: all 150ms ease-in-out;
+}
+
+.sub-circle:hover {
+	transform: translateY(-15px);
+	border: dashed rgba(250, 153, 28, 1.0) 10px;
+}
+.sub-texts {
+	text-align: center;
+	color: #000;
+	font-size: 28px;
+	transition: all 150ms ease-in-out;
+}
+.sub-texts:hover {
+	transform: translateY(-5px);
+	color: rgba(250, 153, 28, 1.0);
+}
+
+.oc:hover {
+	border: dashed #DB4E23 8px;
+}
+
+.pc:hover {
+	border: dashed #9923EB 8px;
+}
+
+.yc:hover {
+	border: dashed #F29C1B 8px;
+}
+
+.oct:hover {
+	color: #DB4E23;
+}
+
+.pct:hover {
+	color: #9923EB;
+}
+
+.yct:hover {
+	color: #F29C1B;
+}
+
+#button-holder {
+	width: 100%;
+	padding: 25px 0 25px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 425px) {
+
+	#cover {
+		height: 160px;
+		background: url("cover_img_phone.png");
+	}
+
+	#cover-img {
+    	width: 64px;
+    	height: 64px;
+	}
+
+	#cover-text h1 {
+    	font-size: 26px;
+	}
+
+	#cover-text p {
+    	font-size: 12px;
+    	line-height: 18px;
+	}
+
+	#cover-text hr {
+	    width: 80%;
+	    height: 5px;
+	    margin: 10px 0 10px 0;
+	}
+
+	#cover-text {
+    	width: 300px;
+    	transform: translateX(-30px);
+	}
+	.sub-icons {
+    	width: 48px;
+    	height: 48px;
+	}
+	.sub-circle {
+    	height: 75px;
+    	width: 75px;
+    	margin: 0 0 5px 0;
+	}
+
+	#subs {
+		align-items: center;
+	}
+
+	.sub {
+    	width: 5%;
+    	margin: 0 60px 0 60px;
+	}
+
+	.sub-row {
+		width: 80%;
+    	margin: 20px 0 20px 0;
+    }
+    .sub-texts {
+    	font-size: 14px;
+    	line-height: 18px;
+    }
+
+    .oc:hover {
+		border: dashed #DB4E23 5px;
+	}
+
+	.pc:hover {
+		border: dashed #9923EB 5px;
+	}
+
+	.yc:hover {
+		border: dashed #F29C1B 5px;
+	}
+
+}
+
+@media (max-width: 375px) {
+
+	.sub {
+    	width: 2.5%;
+    	margin: 0 54px 0 54px;
+	}
+
+	#cover-text hr {
+    	width: 90%;
+    	height: 3px;
+    	margin: 8px 0 8px 0;
+    }
+
+    #cover-img {
+	    width: 56px;
+	    height: 56px;
+	}
+
+	#cover-text h1 {
+    	font-size: 22px;
+	}
+
+	#cover-text {
+	    width: 208px;
+	    transform: translateX(-15px);
+	}
+
+	.sub-circle {
+	    height: 56px;
+	    width: 56px;
+    }
+
+    .sub-icons {
+	    width: 32px;
+	    height: 32px;
+	}
+
+	.sub-texts {
+	    font-size: 12px;
+	    line-height: 18px;
+	}
+
+	.sub-row {
+	    width: 80%;
+	    margin: 10px 0 15px 0;
+	}
+
+
+}
