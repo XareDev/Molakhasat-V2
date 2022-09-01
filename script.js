@@ -1,3 +1,5 @@
+var Permission_asked = false
+
 function Loading_off(){
 	var loader = document.getElementById("loading");
 	loader.style.display ="none";
@@ -12,7 +14,6 @@ function Loading_off(){
 	}
 }
 
-
 window.addEventListener("load", Loading_off)
 
 window.onscroll = function(){scrollFunction()};
@@ -24,18 +25,18 @@ function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
   	// Scroll Down Condtion
     if(window.outerWidth <= 960) {
-    	document.getElementById("logo").style.height = "32px";
-    	document.querySelector(".cta button").style.fontSize = "12px"
-	    document.getElementById("logo").style.width = "32px";
+    	document.getElementById("logo").style.height = "24px";
+    	document.querySelector(".cta button").style.fontSize = "10px"
+	    document.getElementById("logo").style.width = "24px";
 	    for (var i = 0 ; i < nav_items.length; i++) {
-		   	nav_items[i].style.fontSize = "12px"
+		   	nav_items[i].style.fontSize = "10px"
 			};
 			}
 
 
  		else if(window.outerWidth > 960) {
- 			document.getElementById("logo").style.height = "64px";
-	  	document.getElementById("logo").style.width = "64px";
+ 			document.getElementById("logo").style.height = "56px";
+	  	document.getElementById("logo").style.width = "56px";
 	  	for (var i = 0 ; i < nav_items.length; i++) {
 	   			nav_items[i].style.fontSize = "18px"
 	   		};
@@ -50,14 +51,15 @@ function scrollFunction() {
     if(window.outerWidth <= 960) {
     	document.getElementById("logo").style.height = "32px";
 	    document.getElementById("logo").style.width = "32px";
+		document.querySelector(".cta button").style.fontSize = "12px"
 	    for (var i = 0 ; i < nav_items.length; i++) {
-		   	nav_items[i].style.fontSize = "14px"
+		   	nav_items[i].style.fontSize = "12px"
 				};
 			}
 
 		else {
-		  document.getElementById("logo").style.height = "80px";
-		  document.getElementById("logo").style.width = "80px";
+		  document.getElementById("logo").style.height = "64px";
+		  document.getElementById("logo").style.width = "64px";
 		  for (var i = 0 ; i < nav_items.length; i++) {
 		 	nav_items[i].style.fontSize = "24px"
 			};
@@ -143,4 +145,13 @@ function subscribeUserToPush() {
   });
 }
 
-navigator.serviceWorker.register('service-worker.js');
+if ( Notification.permission === 'granted') {
+  navigator.serviceWorker.ready.then(function(registration) {
+    registration.showNotification('شكرا لإشتراككم في خدمة الإشعارات', {
+      body: 'نتمنى لكم تجربة ممتعة في موقع ملخصات',
+      icon: 'logo.png',
+      vibrate: [200, 100, 200, 100, 200, 100, 200],
+      tag: 'New-Molakhasat'
+    });
+  });
+}
