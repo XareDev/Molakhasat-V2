@@ -8,11 +8,13 @@ function addToFunction(paramater) {
     input.focus()
     
 }
-
+/*
 window.onload = e => {
     let info = document.querySelector("#info-popup")
     info.style.animationPlayState = "running"
 }
+
+*/
 
 
 function hidePop() {
@@ -669,6 +671,17 @@ class Calc {
         return Math.round(num * factor) / factor;
     }
 
+}
+
+Limits = document.querySelector("#limit")
+Lims = document.querySelector("#lim")
+Limits.onclick = function () {
+    if (Limits.checked == true) {
+        Lims.style.display = "flex"
+    }
+    else {
+        Lims.style.display = "none"
+    }
 }
 
 derivatives = document.querySelector("#derivatives")
