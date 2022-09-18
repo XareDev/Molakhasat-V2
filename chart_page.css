@@ -599,7 +599,7 @@
 .op-1, .op-2, #lim-num {
     display: none;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) and (min-width: 320px) {
 
 	#cover {
 		height: 160px;
@@ -616,8 +616,8 @@
 	}
 
 	#cover-text p {
-    	font-size: 12px;
-    	line-height: 18px;
+    	font-size: 10px;
+    	line-height: 16px;
 	}
 
 	#cover-text hr {
@@ -626,14 +626,9 @@
 	    margin: 10px 0 10px 0;
 	}
 
-	#cover-text {
-    	width: 300px;
-    	transform: translateX(-30px);
-	}
-
     #function-define h2,#function-canvas h2{
-        transform: translateX(75px);
-        font-size: 32px;
+        transform: translateX(60px);
+        font-size: 22px;
     }
     
     #functions-btns {
@@ -643,6 +638,7 @@
     }
 
     #functions-type-btns {
+        transform: scale(0.8);
         gap: 15px;
         grid-template-columns: 30px auto 30px;
     }
@@ -657,7 +653,7 @@
     }
 
     #function input{
-        font-size: medium;
+        font-size: small;
     }
     
     #function-define {
@@ -713,20 +709,15 @@
     }
 
     #function button {
-        font-size: medium;
+        font-size: small;
     }
 
     #reset {
         font-size: large;
     }
 
-    #download {
-        font-size: medium;
-        width: 55%;
-    }
-
     #derivatives-check {
-        width: 45%;
+        width: 60%;
     }
 
     #derivatives + label {
@@ -736,10 +727,6 @@
     #derivatives {
         width: 15px;
         height: 15px;
-    }
-
-    #Deriv {
-        width: 75%;
     }
 
     #Deriv-point {
@@ -753,7 +740,7 @@
     }
 
     #limit-check {
-        width: 45%;
+        width: 60%;
     }
 
     #limit + label {
@@ -766,15 +753,9 @@
     }
 
     #cover-text {
-        width: 275px;
+        width: 220px;
         transform: translateX(-16px);
     }
-
-    
-}
-
-
-@media (max-width: 375px) {
 
 	#download {
         font-size: small;
