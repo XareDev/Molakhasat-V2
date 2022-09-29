@@ -29,10 +29,11 @@
 	border-radius: 15px;
 }
 
-#years {
+#years, #adds {
     height: auto;
     padding: 20px;
 	display: flex;
+	justify-content: space-evenly;
 	align-items: center;
 }
 
