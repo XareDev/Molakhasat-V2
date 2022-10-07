@@ -191,13 +191,14 @@ def Molkhas_code(name: str, number: int, author: str) :
         )
     return lxml.html.tostring(code, encoding="unicode", pretty_print=True)
 
-Hm = ["ملخص درس الإسم المبني", "ملخص درس الإتساق و الإنسجام", "ملخص درس أفعال المدح و الذم", "ملخص درس أسماء الشرط و أدوات الإستفهام", "ملخص درس صيغ المبالغة", "تذكير بدروس الصور البيانية و المحسنات البديعية", "ملخص درس الإختصاص", "ملخص شعر وصف الطبيعة"]
-HmId = ["1qoxKjmx95N7j9MX8hxlDlMeWGRc2H1e6", "1HEke3407s3Ycz9pqXciDiqvQQGG2NaVN", "1vX5VUyzsw8XCKFfFyeeeKCngCWJltnNv", "1OtwrRop_Ug_CQ5Au5jCYc7MKCelov_7F", "1Q_X5CRvMbISZFUFv9a8t6501m3YdX6iS", "1rWCpgceGlWQZ9D5BO2ayvQY2UoVzbwGk", "1gMzLN6iRKs0ZW34jrqS5UqiW7JNc0LKA", "1CR2pWUGWl4atiCYyDi8ru0E-T1a3LQWV"]
-HmS = "اللغة العربية"
+Hm = ["درس وظيفة التحكم", "درس التطبيقات الكهرومغناطيسية", "سند التكنولوجيا الجزء الأول", "ملخص درس الأنظمة الألية", "درس وظيفة التغذية"]
+HmId = ["1pP_CQiQvyL9dFhTL_W3E_3p4DgihB3N_", "1sjlnwFYiZtG2y_QDWEWR6voNATukgYjp", "1sbuIA9YMcKCLsG3fdGfbMG8IePyXO-vF", "1cZ0Z5DRrakJKvSeir2PU4_9GlK-ZyiiQ", "1XnFfCqKkGw8u3Kd3jQ2SQt5yuqE3R3Jf"]
+HmA = ["جنيدي زهرة و ولد قادة نجادي", "جنيدي زهرة و ولد قادة نجادي", "بن التاج فتيحة", "بن التاج فتيحة", "بن التاج فتيحة"]
+HmS = "الهندسة الكهربائية"
 HmY = "الثانية"
 
 for i in range(0, len(Hm)):
     m = Molakhasat(type="ms", name=Hm[i], Id=HmId[i], sub=HmS, year=HmY)
     SaveMolakhas(f"m{i+1}.html", m)
-    print(Molkhas_code(Hm[i], i, author="يوسف هرموني"))
+    print(Molkhas_code(Hm[i], i+1, author=HmA[i]))
 
