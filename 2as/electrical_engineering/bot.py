@@ -191,14 +191,14 @@ def Molkhas_code(name: str, number: int, author: str) :
         )
     return lxml.html.tostring(code, encoding="unicode", pretty_print=True)
 
-Hm = ["درس وظيفة التحكم", "درس التطبيقات الكهرومغناطيسية", "سند التكنولوجيا الجزء الأول", "ملخص درس الأنظمة الألية", "درس وظيفة التغذية"]
-HmId = ["1pP_CQiQvyL9dFhTL_W3E_3p4DgihB3N_", "1sjlnwFYiZtG2y_QDWEWR6voNATukgYjp", "1sbuIA9YMcKCLsG3fdGfbMG8IePyXO-vF", "1cZ0Z5DRrakJKvSeir2PU4_9GlK-ZyiiQ", "1XnFfCqKkGw8u3Kd3jQ2SQt5yuqE3R3Jf"]
-HmA = ["جنيدي زهرة و ولد قادة نجادي", "جنيدي زهرة و ولد قادة نجادي", "بن التاج فتيحة", "بن التاج فتيحة", "بن التاج فتيحة"]
+Hm = ["دفتر تطبيقات الهندسة الكهربائية"]
+HmId = ["1Efv7sXU5YuxxcDCHIRdprhkI0BAkknmL"]
+HmA = ["بن التاج فتيحة"]
 HmS = "الهندسة الكهربائية"
 HmY = "الثانية"
 
 for i in range(0, len(Hm)):
-    m = Molakhasat(type="ms", name=Hm[i], Id=HmId[i], sub=HmS, year=HmY)
+    m = Molakhasat(type="hm", name=Hm[i], Id=HmId[i], sub=HmS, year=HmY)
     SaveMolakhas(f"m{i+1}.html", m)
     print(Molkhas_code(Hm[i], i+1, author=HmA[i]))
 
