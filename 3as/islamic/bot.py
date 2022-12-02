@@ -191,14 +191,14 @@ def Molkhas_code(name: str, number: int, author: str) :
         )
     return lxml.html.tostring(code, encoding="unicode", pretty_print=True)
 
-Hm = ["ملخص أدب عصر الضعف", "ملخص الشعر التعليمي", "ملخص النثر العلمي المتأدب", "ملخص أدب المهجر", "ملخص النزعة الإنسانية"]
-HmId = ["111Px-_aMLZxhvaiDIhLdm6NYnw0siG85", "1nlU55KEnuR95UCCUX40esSqlUZY-A_s1", "1pf-pdILwflvHd0xGH2JzjTg-_q0_cI6A", "1KWENTdhoEKVUCGk4yADBiZxqibOIic0T", "1dFkOQWQo5nN1298XgzPTzGePdMzfMl3u"]
+Hm = ["العقيدة و أثرها على الفرد و المجتمع", "وسائل القرآن في تثبيت الشريعة الإسلامية", "الإسلام و الرسالات السماوية", "العقل في الإسلام", "مقاصد الشريعة الإسلامية", "منهج الإسلام في محاربة الإنحراف و الجريمة"]
+HmId = ["11yl_3Va0niyoPg1BAVtPHZp65W3222uc", "1RSqrDdOId1EmuRzSRU6aiAD58o72lRIn" ,"1_JsPxBOOVYISaaIsSGPehk6l5-tgXUbb", "1WvBeSL1yUQR5adMOg8sgVKyXKVUI6U43", "1zvh-f6NPT1961mAJPMwGVOV5J7dYuwSG", "1ffYaC6UmP4MX4Rcr04xUBxKLCtM5ikwl"]
 HmA = ["يوسف هرموني"]
-HmS = "اللغة العربية"
+HmS = "فلسفة"
 HmY = "الثالثة"
 
 for i in range(0, len(Hm)):
     m = Molakhasat(type="ms", name=Hm[i], Id=HmId[i], sub=HmS, year=HmY)
-    SaveMolakhas(f"m{i+1+24}.html", m)
-    print(Molkhas_code(Hm[i], i+1+24, author=HmA[0]))
+    SaveMolakhas(f"m{i+1+25}.html", m)
+    print(Molkhas_code(Hm[i], i+1+25, author=HmA[0]))
 
